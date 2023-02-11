@@ -41,8 +41,10 @@ public class Test2 {
         capabilities.setCapability("appium:deviceName", "Pixel2");
         capabilities.setCapability("platformName", "Android");
 
-        capabilities.setCapability("appium:appPackage", "io.appium.android.apis");
-        capabilities.setCapability("appium:appActivity", "io.appium.android.apis.ApiDemos");
+        // capabilities.setCapability("appium:appPackage","io.appium.android.apis");
+        capabilities.setCapability("appium:appPackage", "com.touchboarder.android.api.demos");
+        // capabilities.setCapability("appium:appActivity","io.appium.android.apis.ApiDemos");
+        capabilities.setCapability("appium:appActivity", "com.touchboarder.androidapidemos.MainActivity");
 
         // RemoteWebDriver --> WebDriver --> AppiumDriver --> (AndroidDriver, iOSDriver)
 

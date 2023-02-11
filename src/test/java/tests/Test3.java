@@ -13,6 +13,7 @@ import utils.App;
 import utils.Device;
 
 import java.net.MalformedURLException;
+import java.util.List;
 
 
 public class Test3 {
@@ -55,6 +56,10 @@ public class Test3 {
         // appium nerede çalışıyor--->
 
         driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Accessibility']")).click();
+
+        //driver.navigate().back();
+        List<MobileElement>list = driver.findElements(By.id("android:id/text1"));
+
         driver.closeApp();
 
         service.stop();
