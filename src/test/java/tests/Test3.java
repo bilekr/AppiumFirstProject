@@ -19,8 +19,8 @@ import java.util.List;
 public class Test3 {
 
     AppiumDriverLocalService service;
-    Device device=Device.PIXEL2;
-    App app=App.APIDEMO;
+    Device device = Device.PIXEL2;
+    App app = App.APIDEMO;
 
     @Test
     public void test1() throws MalformedURLException {
@@ -34,14 +34,13 @@ public class Test3 {
         service.start();
 
 
-
         //Appium inspectorda json yapısını alıyoruz
         //Desired capabilities = hangi cihaz hangi uygulamaya bağlanılacak
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
 
         capabilities.setCapability("appium:udid", device.udid);
-        capabilities.setCapability("appium:version",device.version);
+        capabilities.setCapability("appium:version", device.version);
         capabilities.setCapability("appium:deviceName", device.deviceName);
         capabilities.setCapability("platformName", device.platformName);
 
@@ -58,7 +57,7 @@ public class Test3 {
         driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Accessibility']")).click();
 
         //driver.navigate().back();
-        List<MobileElement>list = driver.findElements(By.id("android:id/text1"));
+        List<MobileElement> list = driver.findElements(By.id("android:id/text1"));
 
         driver.closeApp();
 
